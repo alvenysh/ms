@@ -1,0 +1,12 @@
+---
+- name: Блокировка
+  hosts: test
+  become: true
+  tasks:
+  - name: Установить gconf2
+    apt:
+      name: gconf2
+      state: present
+
+  - name: Установить клавишу F3 для блокировки экрана
+    command: gconftool-2 --set /apps/metacity/global_keybindings/run_command_1 --type string "F3"

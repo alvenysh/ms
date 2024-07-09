@@ -1,0 +1,593 @@
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+# Ex 1: Ungrouped hosts, specify before any group headers.
+
+[clients]
+
+mirstan004 ansible_host=10.10.20.9  ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client026 ansible_host=10.10.20.26  ansible_user=root ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client054 ansible_host=10.10.20.54 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client055 ansible_host=10.10.20.55  ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client070 ansible_host=10.10.20.70  ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client100 ansible_host=10.10.20.100  ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client107 ansible_host=10.10.20.107 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client112 ansible_host=10.10.20.112 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+
+[new]
+client086 ansible_host=10.10.20.86 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client149 ansible_host=10.10.20.149 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client143 ansible_host=10.10.20.143 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client070 ansible_host=10.10.20.70 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client173 ansible_host=10.10.20.173 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client191 ansible_host=10.10.20.191 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client207 ansible_host=10.10.20.207 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client227 ansible_host=10.10.20.227 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client238 ansible_host=10.10.20.238 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+
+[new2]
+#client125 ansible_host=10.10.20.125 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client119 ansible_host=10.10.21.119 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+
+[te]
+clients[20:200] ansible_host=10.10.20.[20:200] ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+
+
+[test]
+[new]
+
+10.10.20.1 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.2 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.3 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.4 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.5 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.6 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.7 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.8 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.9 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.10 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.11 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.12 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.13 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.14 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.15 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.16 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.17 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.18 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.19 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.20 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.21 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.22 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.23 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.24 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.25 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.26 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.27 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.28 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.29 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.30 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.31 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.32 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.33 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.34 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.35 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.36 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.37 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.38 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.39 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.40 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.41 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.42 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.43 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.44 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.45 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.46 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.47 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.48 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.49 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.50 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.51 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.52 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.53 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.54 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.55 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.56 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.57 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.58 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.59 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.60 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.61 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.62 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.63 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.64 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.65 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.66 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.67 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.68 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.69 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.70 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.71 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.72 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.73 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.74 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.75 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.76 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.77 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.78 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.79 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.80 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.81 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.82 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.83 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.84 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.85 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.86 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.87 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.88 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.89 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.90 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.91 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.92 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.93 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.94 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.95 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.96 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.97 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.98 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.99 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.100 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.101 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.102 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.103 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.104 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.105 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.106 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.107 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.108 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.109 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.110 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.111 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.112 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.113 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.114 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.115 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.116 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.117 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.118 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.119 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.120 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.121 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.122 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.123 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.124 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.125 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.126 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.127 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.128 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.129 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.130 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.131 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.132 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.133 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.134 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.135 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.136 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.137 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.138 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.139 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.140 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.141 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.142 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.143 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.144 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.145 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.146 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.147 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.148 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.149 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.150 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.151 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.152 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.153 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.154 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.155 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.156 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.157 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.158 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.159 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.160 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.161 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.162 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.163 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.164 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.165 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.166 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.167 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.168 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.169 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.170 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.171 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.172 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.173 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.174 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.175 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.176 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.177 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.178 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.179 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.180 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.181 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.182 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.183 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.184 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.185 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.186 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.187 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.188 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.189 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.190 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.191 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.192 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.193 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.194 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.195 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.196 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.197 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.198 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.199 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.200 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.201 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.202 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.203 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.204 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.205 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.206 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.207 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.208 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.209 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.210 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.211 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.212 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.213 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.214 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.215 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.216 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.217 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.218 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.219 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.220 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.221 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.222 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.223 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.224 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.225 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.226 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.227 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.228 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.229 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.230 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.231 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.232 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.233 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.234 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.235 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.236 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.237 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.238 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.239 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.240 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.241 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.242 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.243 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.244 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.245 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.246 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.247 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.248 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.249 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.250 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.251 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.252 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.253 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.254 ansible_user=mcadmin ansible_password='QweasdzxC@#' ansible_python_interpreter=/usr/bin/python3
+10.10.20.1 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.2 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.3 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.4 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.5 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.6 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.7 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.8 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.9 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.10 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.11 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.12 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.13 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.14 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.15 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.16 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.17 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.18 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.19 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.20 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.21 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.22 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.23 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.24 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.25 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.26 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.27 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.28 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.29 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.30 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.31 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.32 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.33 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.34 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.35 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.36 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.37 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.38 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.39 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.40 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.41 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.42 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.43 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.44 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.45 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.46 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.47 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.48 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.49 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.50 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.51 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.52 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.53 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.54 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.55 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.56 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.57 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.58 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.59 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.60 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.61 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.62 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.63 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.64 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.65 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.66 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.67 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.68 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.69 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.70 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.71 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.72 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.73 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.74 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.75 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.76 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.77 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.78 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.79 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.80 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.81 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.82 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.83 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.84 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.85 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.86 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.87 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.88 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.89 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.90 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.91 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.92 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.93 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.94 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.95 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.96 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.97 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.98 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.99 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.100 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.101 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.102 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.103 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.104 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.105 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.106 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.107 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.108 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.109 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.110 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.111 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.112 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.113 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.114 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.115 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.116 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.117 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.118 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.119 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.120 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.121 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.122 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.123 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.124 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.125 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.126 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.127 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.128 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.129 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.130 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.131 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.132 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.133 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.134 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.135 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.136 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.137 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.138 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.139 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.140 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.141 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.142 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.143 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.144 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.145 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.146 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.147 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.148 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.149 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.150 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.151 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.152 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.153 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.154 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.155 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.156 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.157 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.158 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.159 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.160 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.161 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.162 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.163 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.164 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.165 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.166 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.167 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.168 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.169 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.170 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.171 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.172 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.173 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.174 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.175 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.176 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.177 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.178 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.179 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.180 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.181 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.182 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.183 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.184 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.185 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.186 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.187 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.188 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.189 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.190 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.191 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.192 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.193 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.194 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.195 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.196 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.197 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.198 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.199 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.200 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.201 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.202 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.203 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.204 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.205 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.206 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.207 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.208 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.209 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.210 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.211 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.212 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.213 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.214 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.215 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.216 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.217 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.218 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.219 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.220 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.221 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.222 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.223 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.224 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.225 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.226 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.227 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.228 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.229 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.230 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.231 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.232 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.233 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.234 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.235 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.236 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.237 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.238 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.239 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.240 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.241 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.242 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.243 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.244 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.245 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.246 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.247 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.248 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.249 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.250 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.251 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.252 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.253 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+10.10.20.254 ansible_user=mcadmin ansible_password='QweasdzxC@#' 
+
+
+
+[all_groups:children]
+test
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+#green.example.com
+#blue.example.com
+#192.168.100.1
+#192.168.100.10
+
+# Ex 2: A collection of hosts belonging to the 'webservers' group
+
+#[webservers]
+#alpha.example.org
+#beta.example.org
+#192.168.1.100
+#192.168.1.110
+
+# If you have multiple hosts following a pattern you can specify
+# them like this:
+
+#www[001:006].example.com
+
+# Ex 3: A collection of database servers in the 'dbservers' group
+
+#[dbservers]
+#
+#db01.intranet.mydomain.net
+#db02.intranet.mydomain.net
+#10.25.1.56
+#10.25.1.57
+
+# Here's another example of host ranges, this time there are no
+# leading 0s:
+
+#db-[99:101]-node.example.com
+

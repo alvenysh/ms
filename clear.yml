@@ -1,0 +1,28 @@
+- name: Copy script and run it every Saturday at 19:00
+  hosts: test
+  become: yes
+  tasks:
+    - name: Copy script to remote host
+      copy:
+        src: /home/mcadmin/clear.sh
+        dest:  /home/mcadmin/clear.sh
+    - name: Set execute permissions on script
+      file:
+        path: /home/mcadmin/clear.sh
+        mode: '0777'
+    - name: Run script
+      shell: /home/mcadmin/clear.sh
+
+    - name: Add cron job
+      copy:
+        content: '0 17 * * 3 mcadmin /home/mcadmin/clear.sh\n'
+        dest: /etc/cron.d/mycronjob
+        mode: '0777'
+#    - name: Schedule script to run every Saturday at 19:00
+#      cron:
+#        name: Run script every Saturday at 19:00
+#        minute: 0
+#        hour: 19
+#        weekday: 6
+#        user: "root"
+#        job: "/home/mcadmin/clear.sh"

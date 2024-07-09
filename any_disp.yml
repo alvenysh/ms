@@ -1,0 +1,17 @@
+- hosts: new
+  become: yes
+  tasks:
+  - name: Add repo
+    apt_repository:
+      repo: deb http://ru.archive.ubuntu.com/ubuntu/ focal universe
+      update_cache: yes
+  - name: Update
+    become: true
+    apt:
+      update_cache: yes
+  - name: inst
+    command: "sudo apt install libpangox-1.0-0"
+  - name: Copy file
+    copy:
+      src=/home/mcadmin/custom.conf
+      dest=/etc/gdm3/custom.conf

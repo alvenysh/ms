@@ -1,0 +1,18 @@
+- hosts: new2
+  become: yes
+  tasks:
+  - name: Copy dir
+    copy:
+       src=/home/mcadmin/install
+       dest=/home/mcadmin/
+#  - name: Run any
+#    shell: /home/mcadmin/instal/anydesk.sh
+#  - name: Conky
+#    shell: /home/mcadmin/instal/conky.sh
+  - name: wifi
+    command: "rfkill list"
+    command: "rfkill unblock all"
+#  - name: Lock
+#    copy:
+#       src=/home/mcadmin/install/user
+#       dest=/home/user/.config/dconf/

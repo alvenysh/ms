@@ -1,0 +1,49 @@
+---
+- name: Копирование папки и запуск скриптов
+  hosts: new
+  become: true
+  tasks:
+  - name: Установка зависимостей для сборки Conky
+    apt:
+        name:
+          - build-essential
+          - libcairo2-dev
+          - libcurl4-openssl-dev
+          - libimlib2-dev
+          - liblua5.3-dev
+          - libncurses5-dev
+          - libpulse-dev
+          - libx11-dev
+          - libxft-dev
+          - libxml2-dev
+          - libxrandr-dev
+          - libxrender-dev
+          - libxss-dev
+          - libxinerama-dev
+        state: present
+
+  - name: Скачивание исходных кодов Conky
+    get_url:
+        url: https://launchpad.net/ubuntu/+archive/primary/+files/conky-all_1.10.8-1_amd64.deb
+        dest: /tmp/conky-all_1.10.8-1_amd64.deb
+
+  - name: Установка deb-пакета Conky
+    apt:
+        deb: /tmp/conky-all_1.10.8-1_amd64.deb
+        state: present
+
+  - name: Копирование файла 1.png
+    copy:
+        src: /home/mcadmin/install/1.png
+        dest: /etc/conky/1.png
+        mode: '0777'
+  - name: Копирование файла conky.conf
+    copy:
+        src: /home/mcadmin/install/conky.conf
+        dest: /etc/conky/conky.conf
+        mode: '0777'
+  - name: Копирование файла conky.desktop
+    copy:
+        src: /home/mcadmin/install/conky.desktop
+        dest: /etc/xdg/autostart/conky.desktop
+        mode: '0777'

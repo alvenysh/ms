@@ -1,0 +1,10 @@
+---
+- hosts: new
+  become: yes
+  tasks:
+ # upload ssh key                
+  - authorized_key:
+      become: true
+      user: mcadmin
+      state: present
+      key: "{{ lookup('file', '/home/mcadmin/.ssh/id_rsa.pub') }}"

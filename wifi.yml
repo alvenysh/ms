@@ -1,0 +1,14 @@
+- hosts: all
+  become: yes
+  tasks:
+  - name: wifi
+    copy:
+       src=/home/mcadmin/org.freedesktop.NetworkManager.policy
+       dest=/usr/share/polkit-1/actions/org.freedesktop.NetworkManager.policy
+#  - name: Run any
+#    shell: /home/mcadmin/instal/anydesk.sh
+#  - name: Conky
+#    shell: /home/mcadmin/instal/conky.sh
+#  - name: wifi
+#    command: "rfkill list"
+#    command: "rfkill unblock all"

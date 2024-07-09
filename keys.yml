@@ -1,0 +1,17 @@
+- name: Copy and add SSH public key to authorized_keys
+  hosts: list2
+  become: yes
+  become_user: "mcadmin"
+  become_method: "su"
+  vars:
+    ssh_public_key: "{{ lookup('file', '/home/mcadmin/.ssh/id_rsa.pub') }}"
+  tasks:
+    - name: Copy SSH public key to remote host
+      copy:
+        content: "{{ ssh_public_key }}"
+        dest: "/tmp/id_rsa.pub"
+    - name: Add SSH public key to authorized_keys
+      authorized_key:
+        user: "mcadmin"
+        state: present
+        key: "{{ ssh_public_key }}"

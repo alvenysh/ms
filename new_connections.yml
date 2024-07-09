@@ -1,0 +1,8 @@
+- hosts: new
+  become: yes
+  tasks:
+  - name: Copy dir
+    copy:
+       src=/home/mcadmin/new_connections
+       dest=/home/user/
+

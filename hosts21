@@ -1,0 +1,146 @@
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+# Ex 1: Ungrouped hosts, specify before any group headers.
+
+[clients]
+
+mirstan004 ansible_host=10.10.20.9  ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client026 ansible_host=10.10.20.26  ansible_user=root ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client054 ansible_host=10.10.20.54 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client055 ansible_host=10.10.20.55  ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client070 ansible_host=10.10.20.70  ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client100 ansible_host=10.10.20.100  ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client107 ansible_host=10.10.20.107 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client112 ansible_host=10.10.20.112 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+
+[new]
+client149 ansible_host=10.10.20.149 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client143 ansible_host=10.10.20.143 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client070 ansible_host=10.10.20.70 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client173 ansible_host=10.10.20.173 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client191 ansible_host=10.10.20.191 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client207 ansible_host=10.10.20.207 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client227 ansible_host=10.10.20.227 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client238 ansible_host=10.10.20.238 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+
+[new2]
+client119 ansible_host=10.10.21.119 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#client232 ansible_host=10.10.21.232 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+
+[test]
+client003 ansible_host=10.10.21.3 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client004 ansible_host=10.10.21.4 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client005 ansible_host=10.10.21.5 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client006 ansible_host=10.10.21.6 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client007 ansible_host=10.10.21.7 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client008 ansible_host=10.10.21.8 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client009 ansible_host=10.10.21.9 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client011 ansible_host=10.10.21.11 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client013 ansible_host=10.10.21.13 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client014 ansible_host=10.10.21.14 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client015 ansible_host=10.10.21.15 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client016 ansible_host=10.10.21.16 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client017 ansible_host=10.10.21.17 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client018 ansible_host=10.10.21.18 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client024 ansible_host=10.10.21.24 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client025 ansible_host=10.10.21.25 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client026 ansible_host=10.10.21.26 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client028 ansible_host=10.10.21.28 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client029 ansible_host=10.10.21.29 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client032 ansible_host=10.10.21.32 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client033 ansible_host=10.10.21.33 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client034 ansible_host=10.10.21.34 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client035 ansible_host=10.10.21.35 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client036 ansible_host=10.10.21.36 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client037 ansible_host=10.10.21.37 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client038 ansible_host=10.10.21.38 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client039 ansible_host=10.10.21.39 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client042 ansible_host=10.10.21.42 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client043 ansible_host=10.10.21.43 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client044 ansible_host=10.10.21.44 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client045 ansible_host=10.10.21.45 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client047 ansible_host=10.10.21.47 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client048 ansible_host=10.10.21.48 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client050 ansible_host=10.10.21.50 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client053 ansible_host=10.10.21.53 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client054 ansible_host=10.10.21.54 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client055 ansible_host=10.10.21.55 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client056 ansible_host=10.10.21.56 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client057 ansible_host=10.10.21.57 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client061 ansible_host=10.10.21.61 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client062 ansible_host=10.10.21.62 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client063 ansible_host=10.10.21.63 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client064 ansible_host=10.10.21.64 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client065 ansible_host=10.10.21.65 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client066 ansible_host=10.10.21.66 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client074 ansible_host=10.10.21.74 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client076 ansible_host=10.10.21.76 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client077 ansible_host=10.10.21.77 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client078 ansible_host=10.10.21.78 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client080 ansible_host=10.10.21.80 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client081 ansible_host=10.10.21.81 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client082 ansible_host=10.10.21.82 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client083 ansible_host=10.10.21.83 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client084 ansible_host=10.10.21.84 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client085 ansible_host=10.10.21.85 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client086 ansible_host=10.10.21.86 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client087 ansible_host=10.10.21.87 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client088 ansible_host=10.10.21.88 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client089 ansible_host=10.10.21.89 ansible_user=mcadmin ansible_ssh_private_key_file=/root/.ssh/id_rsa
+client090 ansible_host=10.10.21.90 ansible_user=mcadmin ansible_ssh_private_key>
+client091 ansible_host=10.10.21.91 ansible_user=mcadmin ansible_ssh_private_key>
+client092 ansible_host=10.10.21.92 ansible_user=mcadmin ansible_ssh_private_key>
+client093 ansible_host=10.10.21.93 ansible_user=mcadmin ansible_ssh_private_key>
+client094 ansible_host=10.10.21.94 ansible_user=mcadmin ansible_ssh_private_key>
+client095 ansible_host=10.10.21.95 ansible_user=mcadmin ansible_ssh_private_key>
+client096 ansible_host=10.10.21.96 ansible_user=mcadmin ansible_ssh_private_key>
+client097 ansible_host=10.10.21.97 ansible_user=mcadmin ansible_ssh_private_key>
+
+[list]
+
+
+[all_groups:children]
+test
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+#green.example.com
+#blue.example.com
+#192.168.100.1
+#192.168.100.10
+
+# Ex 2: A collection of hosts belonging to the 'webservers' group
+
+#[webservers]
+#alpha.example.org
+#beta.example.org
+#192.168.1.100
+#192.168.1.110
+
+# If you have multiple hosts following a pattern you can specify
+# them like this:
+
+#www[001:006].example.com
+
+# Ex 3: A collection of database servers in the 'dbservers' group
+
+#[dbservers]
+#
+#db01.intranet.mydomain.net
+#db02.intranet.mydomain.net
+#10.25.1.56
+#10.25.1.57
+
+# Here's another example of host ranges, this time there are no
+# leading 0s:
+
+#db-[99:101]-node.example.com
+
